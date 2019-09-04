@@ -21,6 +21,12 @@ exports.cssLoaders = function (options) {
       sourceMap: options.sourceMap
     }
   }
+  const px2remLoader = {
+    loader: 'px2rem-loader',
+    options: {
+      remUnit: 37.5 // 这里设置html根字体，通常设置为设计稿宽度的 1/10。vant-UI的官方根字体大小是37.5
+    }
+  }
 
   const postcssLoader = {
     loader: 'postcss-loader',
@@ -31,7 +37,7 @@ exports.cssLoaders = function (options) {
 
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
+    const loaders = options.usePostCSS ? [cssLoader, postcssLoader,px2remLoader] : [cssLoader,px2remLoader]
 
     if (loader) {
       loaders.push({

@@ -2,13 +2,13 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 运行项目
 npm run dev
 
-# build for production with minification
+# 打包项目
 npm run build
 
 # build for production and view the bundle analyzer report
@@ -84,6 +84,8 @@ import 'lib-flexible/flexible'
 ## 配置px2rem-loader
 
 ```
+npm install px2rem-loader -S
+
 // 在build文件中找到util.js，将px2rem-loader添加到cssLoaders中，如:
 const px2remLoader = {
     loader: 'px2rem-loader',

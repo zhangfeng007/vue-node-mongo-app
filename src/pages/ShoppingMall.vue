@@ -1,5 +1,5 @@
 <template>
-  <div id="">
+  <div id="ShoppingMall">
       {{num}}
   </div>
 </template>
@@ -22,5 +22,7 @@
 </script>
 
 <style scoped>
-
+#ShoppingMall {
+  font-size: 24px;
+}
 </style>
