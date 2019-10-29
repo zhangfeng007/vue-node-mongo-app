@@ -3,12 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import http from './api/http'
+Vue.use(http)
+
 
 import 'lib-flexible/flexible' 
-import {Button ,Row , Col} from 'vant'
+import {Button ,Row , Col , Search , Swipe , SwipeItem , Icon } from 'vant'
 
-Vue.use(Button).use(Row).use(Col);
-
+Vue.use(Button).use(Row).use(Col).use(Search).use(Swipe).use(SwipeItem).use(Icon);
 
 
 Vue.config.productionTip = false
